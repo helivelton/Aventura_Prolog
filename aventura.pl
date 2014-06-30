@@ -21,7 +21,8 @@ start :-
   assertz(fixo(mesa)),
   assertz(escuro(area)),
   assertz(fixo(lavadoura)),
-  assertz(possui(celular)),!.
+  assertz(possui(celular)),
+  instrucoes,!.
   
   
 instrucoes:-
@@ -34,12 +35,23 @@ instrucoes:-
   
   
 ajuda:-
-  write('|-------------------------------------------------------------------|'),nl,
-  write('|status. - descreve o ambiente atual                                |'),nl,
-  write('|ir_para(Lugar) - muda de ambiente, se acessivel                    |'),nl,
-  write('|pegar(Objeto) - adiciona um objeto do ambiente atual ao inventario |'           KEYS?        |'),nl,
-  write('           |------------------------|'),nl,
-  write('         Digite "ajuda." para intruncoes'),nl,!.
+  write('|--------------------------------------------------------------------|'),nl,
+  write('|                      Where are my keys?                            |'),nl,
+  write('|Seu objetivo eh encontrar suas chaves perdidas, para isso utilize os|'),nl,
+  write('|comandos para navegar pelo cenario e utilizar os objetos diponiveis |'),nl,
+  write('|para ajuda-lo a alcancar seu objetivo final.                        |'),nl,
+  write('|                                                                    |'),nl,
+  write('|COMANDOS:                                                           |'),nl,
+  write('|status. - descreve o ambiente atual                                 |'),nl,
+  write('|ir_para(Lugar) - muda de ambiente, se acessivel                     |'),nl,
+  write('|pegar(Objeto) - adiciona um objeto do ambiente atual ao inventario  |'),nl,
+  write('|combinar(Objeto1,Objeto2) - combina dois objetos, se possivel       |'),nl,
+  write('|ligar(Objeto) - ativa um objeto do inventario, se possivel          |'),nl,
+  write('|olhar_em(Objeto) - lista objetos presentes em um dado objeto        |'),nl,
+  write('|jogar(Objeto) - Joga um objeto do inventario no local atual         |'),nl,
+  write('|Inventario. - lista os objetos presentes no inventario              |'),nl,
+  write('|--------------------------------------------------------------------|'),nl,!.
+  
 
   
 
